@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityManager;
 import java.util.List;
 
+@Transactional
 @Repository
 public class EmployeeDAOHibernateImpl implements EmployeeDAO{
 
@@ -17,6 +18,7 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO{
     private EntityManager entityManager;
 
     //set up constructor injection, we can use any type of injection not only constructor injection
+
     @Autowired
     public EmployeeDAOHibernateImpl(EntityManager theEntityManager){
         entityManager = theEntityManager;
